@@ -1,0 +1,33 @@
+.visualization-container {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Highlight for sorted elements */
+.number-item.sorted-element {
+    background-color: rgba(28, 10, 46, 0.9) !important; /* Darker, intense purple */
+    box-shadow: 0px 0px 30px 15px rgba(128, 0, 128, 0.8) !important; /* Stronger purple glow */
+    border: 2px solid rgb(116, 63, 224) !important; /* Bold outline */
+    color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Highlighting the current comparison elements */
+.number-item.active,
+.number-item:focus {
+    background-color: rgb(158, 86, 252); /* Purple for comparison */
+    border: 2px solid white; /* White outline for comparison */
+}
+
+/* Ensure sorted elements retain styles even when they are being compared */
+.number-item.sorted-element.active,
+.number-item.sorted-element:focus {
+    background-color: rgba(28, 10, 46, 0.9) !important; /* Dark background for sorted, even during comparison */
+    box-shadow: 0px 0px 30px 15px rgba(128, 0, 128, 0.8) !important; /* Intense glow during comparison */
+    border: 2px solid rgb(116, 63, 224) !important; /* Retain bold outline */
+    color: white;
+}

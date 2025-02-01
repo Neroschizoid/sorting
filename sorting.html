@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="curtain"></div>
+
+    <div id="controls">
+        <select id="sort-select" onchange="navigateToPage(this.value)">
+            <option value="">Sorting Method</option>
+            <option value="bubble.html">Bubble Sort</option>
+            <option value="zex.html">Merge Sort</option>
+            <option value="quick.html">Quick Sort</option>
+            <option value="selection.html">Selection Sort</option>
+        </select>
+    </div>
+    <header class="hero-section">
+        
+        <div class="hero-content">
+            <h1><img src="logo.png" style="vertical-align:middle; ;" width="60px" alt="Logo" class="logo">Sorting Visualizer</h1>
+            <p class="hero-description">Explore and learn how various sorting algorithms work with interactive visualizations. Perfect for students, educators, and coding enthusiasts!</p>
+        </div>
+    </header>
+
+    <section class="card-stack">
+        <div class="card" style="--delay: 0s;">Bubble Sort: A simple algorithm that compares adjacent elements.</div>
+        <div class="card" style="--delay: 0.2s;">Merge Sort: A divide-and-conquer method.</div>
+        <div class="card" style="--delay: 0.4s;">Quick Sort: Efficient for large datasets.</div>
+        <div class="card" style="--delay: 0.6s;">Selection Sort: Find the smallest element each pass.</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sorting Visualizer. Designed for learning and exploration.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

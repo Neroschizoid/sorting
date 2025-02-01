@@ -1,0 +1,191 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.curtain {
+    position: fixed;  /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;  /* Full width */
+    height: 16vh;  /* Half the viewport height (creates a curved top section) */
+    background: rgba(0, 0, 0, 0.6);  /* Semi-transparent dark background */
+    backdrop-filter: blur(10px);  /* Apply a blur to the background */
+    border-bottom-left-radius: 80% 20%;  /* Sharp curve on the left side */
+    border-bottom-right-radius: 80% 20%;  /* Create the curved effect */
+    z-index: -1;  /* Place behind other elements */
+    animation: curtainAnimation 8s ease-in-out infinite;  /* Animation for the radiating effect */
+}
+
+/* Purple outline animation */
+@keyframes curtainAnimation {
+    0% {
+        box-shadow: 0 0 25px 10px rgb(68, 5, 93);
+    }
+    50% {
+        box-shadow: 0 0 50px 25px rgb(68, 5, 93);
+    }
+    100% {
+        box-shadow: 0 0 25px 10px rgb(68, 5, 93);
+    }
+}
+
+
+body {
+    background: linear-gradient(90deg, black, rgb(70, 50, 118));
+    background-size: 200% 200%;
+    animation: gradientFlow 8s infinite alternate;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+.hero-section {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    margin-bottom: 20px;
+}
+
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(29, 20, 44, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transition: box-shadow 0.3s ease;
+}
+.hero-description:hover {
+    box-shadow: 0 0 15px 3px purple;
+}
+.card-stack {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 150px;
+    height: 100px;
+    background: rgba(29, 20, 44, 0.9);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(calc(var(--delay) * 15px));
+    animation: slideIn 5s infinite;
+    animation-delay: var(--delay);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px 3px purple;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#sort-select {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border: 1px solid purple;
+    outline: none;
+}
+
+
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#controls {
+    display: flex;            
+    justify-content: left;  
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;       
+}
+
+#sort-select:focus {
+    outline: none; 
+    background-color:rgb(66, 57, 132);
+    color:black; 
+}
+#sort-select option{
+    margin-right: 20px; 
+    padding: 8px; 
+    border: none; 
+    border-color: transparent;
+    border-radius: 8px; 
+    background-color:black;
+    color: white;
+}
+#sort-select:hover {
+    background-color:rgba(36, 22, 55, 0.766) ;
+    color: rgb(255, 255, 255);
+}

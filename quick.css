@@ -1,0 +1,277 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(180deg, rgba(3, 0, 11, 1), rgb(31, 8, 52)); /* Dark Purple to Black */
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    padding-left: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 60px;
+    text-wrap: wrap;
+    text-align: left;
+}
+
+#mbutton {
+    position: absolute;
+    vertical-align: top;
+    margin-top: 95px;
+    margin-left: 3px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    top: -10px;
+    right: 92%;
+}
+
+#quick-input { /* Updated ID */
+    position: absolute;
+    text-align: left;
+    font-size: 19px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    border-color: rgb(129, 115, 239);
+    background-color: rgb(17, 17, 17);
+    color: white;
+    width: 15em; /* Adjust width as needed */
+    top: 90px;
+    right: 100%;
+}
+
+p1 {
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(57px) translateX(-170px);
+    color: white;
+    font-size: larger;
+    font-family: sans-serif;
+    background-color: rgba(23, 21, 23);
+    padding: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 32px;
+    border-color: rgb(158, 86, 252);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.card {
+    margin: 10px;
+    width: 90%;
+    height: 300px;
+    box-shadow: 0px 0px 85px rgba(158, 86, 252, 0.2);
+    border-radius: 24px;
+    backdrop-filter: blur(35px);
+    background-color: rgba(48, 48, 48, 0.2);
+    padding: 10px;
+    text-align: center;
+    animation: cardAnimation 5s ease-in-out infinite;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 85px rgba(172, 114, 248, 0.29);
+}
+
+@keyframes cardAnimation {
+    0% {
+        background-color: rgba(48, 48, 48, 0.2);
+        box-shadow: 0px 0px 85px rgba(158, 86, 252, 0.2);
+    }
+    50% {
+        background-color: rgba(30, 30, 30, 0.4);
+        box-shadow: 0px 0px 85px rgba(158, 86, 252, 0.6);
+    }
+    100% {
+        background-color: rgba(48, 48, 48, 0.2);
+        box-shadow: 0px 0px 85px rgba(158, 86, 252, 0.2);
+    }
+}
+
+p {
+    padding-left: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-wrap: wrap;
+    text-align: left;
+}
+
+.number-list {
+    align-items: start;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    margin-right: 50px;
+    transform: translateX(-190px);
+}
+
+.number-item {
+    display: inline-flex;
+    min-width: 50px;
+    gap: 2px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 14px;
+    color: white;
+    font-family: sans-serif;
+    margin: 3px;
+    font-size: 30px;
+    transition: transform 0.5s ease; /* Smooth transition for movement */
+}
+
+#next-button {
+    margin: 10px;
+    position: absolute;
+    transform: translate(250px, 350px);
+    width: 5em;
+    font-size: large;
+    border-radius: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgb(158, 86, 252);
+    color: white;
+    border: solid 1px white;
+}
+
+.array-block {
+    display: inline-flex;
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid rgb(158, 86, 252);
+    border-radius: 8px;
+    min-width: 30px;
+    text-align: center;
+    background-color: transparent;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    font-size: larger;
+}
+
+.array-container {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+}
+
+.home {
+    transform: translateX(-480px);
+}
+
+.initial-values-container {
+    max-width: 300px;
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    position: absolute;
+    left: 20%;
+    top: 85px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0px 0px 40px rgba(158, 86, 252, 0.4);
+}
+
+#quick { /* Updated ID */
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+#frame {
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    box-shadow: 0px 0px 55px rgba(119, 0, 255, 0.29);
+    width: 530px;
+    height: 300px;
+}
+
+#quick-graph-frame { /* Updated ID */
+    width: 100%;
+    height: 350px;
+    border: none;
+    display: block;
+    object-fit: contain;
+}
+
+.frames {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+#quick-graph-frame iframe { /* Updated ID */
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transform-origin: top left;
+}
+
+/* Initial setup */
+.initial-values-container {
+    max-width: 300px;
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    position: absolute;
+    left: 20%;
+    top: 85px;
+    backdrop-filter: blur(20px); /* Apply blur effect */
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0px 0px 40px rgba(158, 86, 252, 0.4); /* Add glowing shadow for emphasis */
+}
+
+.array-block {
+    display: inline-flex;
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid rgb(158, 86, 252);
+    border-radius: 8px;
+    min-width: 30px;
+    text-align: center;
+    background-color: transparent;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    font-size: larger;
+}
+
+/* Adding an animation for splitting the blocks */
+.split-left {
+    transform: translateX(-50px) scale(0.9); /* Move to the left */
+}
+
+.split-right {
+    transform: translateX(50px) scale(0.9); /* Move to the right */
+}
+
+.merge {
+    transform: translateX(0) scale(1); /* Bring back to center */
+}
+
+/* Style when the user starts typing */
+.array-block.typing {
+    background-color: #ff9800; /* Change color when the user is typing */
+    transform: scale(1.1);
+}

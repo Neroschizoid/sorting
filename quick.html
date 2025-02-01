@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort Page</title>
+    <link rel="stylesheet" href="quick.css">
+</head>
+<body>
+    <div class="home">
+        <a href="sorting.html">
+            <img style="width: 10%;filter: invert(100%);" src="C:\Users\justn\Downloads\pngwing.com.png">
+        </a>
+    </div>
+    <div class="card">
+        <h1>Quick Sort</h1>
+        <p>"Quick Sort is a divide-and-conquer algorithm that selects a 'pivot' element and partitions the array into two halves, sorting each half recursively."</p>
+        <p>"This algorithm is generally faster than Merge Sort for smaller datasets, with an average time complexity of O(n log n), but can degrade to O(n^2) in the worst case."</p>
+        <p>"Quick Sort is not a stable sorting algorithm, but it is in-place, requiring minimal additional storage."</p>
+    </div>
+
+    <p1>Initial Array</p1>
+    <div id="quick" class="sort-section"> <!-- Updated ID -->
+        <input type="text" id="quick-input" placeholder="Enter values (comma separated):"> <!-- Updated ID -->
+        <button id="mbutton" onclick="startSort('quick')"><img src="load.png" style="width: 50px; vertical-align: top;"></button>
+
+        <div id="initial-values-display" class="initial-values-container"></div>
+
+        <div id="quick-visualization" class="visualization-container"></div> <!-- Updated ID -->
+
+        <button id="next-button" onclick="nextStep()" disabled>Next</button>
+    </div>
+
+    <div id="frame" class="frames">
+        <iframe id="quick-graph-frame" src="graph.html" frameborder="0"></iframe> <!-- Updated ID -->
+    </div>
+
+    <script src="quick.js"></script>
+</body>
+</html>

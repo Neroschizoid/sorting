@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort Page</title>
+    <link rel="stylesheet" href="zex.css">
+</head>
+<body>
+    <div class="home">
+        <a href="sorting.html">
+            <img style="width: 10%;filter: invert(100%);" src="C:\Users\justn\Downloads\pngwing.com.png">
+        </a>
+    </div>
+    <div class="card">
+        <h1>Merge Sort</h1>
+        <p>"Merge Sort is a divide-and-conquer algorithm that divides the input array into two halves, sorts each half, and then merges the sorted halves."</p>
+        <p>"This algorithm is more efficient than Bubble Sort for large datasets, as it has a time complexity of O(n log n)."</p>
+        <p>"Merge Sort is a stable, comparison-based sorting algorithm, but it requires extra space for the temporary arrays used during merging."</p>
+    </div>
+
+    <p1>Initial Array</p1>
+    <div id="merge" class="sort-section">
+        <input type="text" id="merge-input" placeholder="Enter values (comma separated):">
+        <button id="mbutton" onclick="startSort('merge')"><img src="load.png" style="width: 50px; vertical-align: top;"></button>
+
+        <div id="initial-values-display" class="initial-values-container"></div>
+
+        <div id="merge-visualization" class="visualization-container"></div>
+
+        <button id="next-button" onclick="nextStep()" disabled>Next</button>
+    </div>
+
+    <div id="frame" class="frames">
+        <iframe id="merge-graph-frame" src="graph.html" frameborder="0"></iframe>
+    </div>
+
+    <script src="zex.js"></script>
+</body>
+</html>

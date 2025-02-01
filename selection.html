@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort Page</title>
+    <link rel="stylesheet" href="selection.css">
+</head>
+<body>
+    <div class="home">
+        <a href="sorting.html">
+        <img style="width: 10%;filter: invert(100%);" src="C:\Users\justn\Downloads\pngwing.com.png"></a>
+    </div>
+    <div class="card">
+        <h1>Selection Sort</h1>
+        <p>"Selection Sort is a simple comparison-based sorting algorithm that divides the input list into two parts: a sorted and an unsorted region."</p>
+        <p>"It repeatedly selects the smallest (or largest) element from the unsorted region and moves it to the end of the sorted region."</p>
+        <p>"Selection Sort is not stable and performs poorly on large lists, but it is easy to implement."</p>
+    </div>
+    
+    <p1>Initial Array</p1>
+    
+    <div id="selection" class="sort-section">
+        <input type="text" id="selection-input" placeholder="Enter values (comma separated):">
+        <button id="sbutton" onclick="startSort('selection')"><img src="load.png" style="width: 50px; vertical-align: top;"></button>
+        
+        <div id="initial-values-display" class="initial-values-container"></div>
+    
+        <div id="selection-visualization" class="visualization-container"></div>
+        
+        <button id="next-button" onclick="nextStep()" disabled>Next</button>
+    </div>
+    
+    <div id="frame" class="frames">
+        <iframe id="selection-graph-frame" src="graph.html" frameborder="0"></iframe>
+    </div>
+    
+    <script src="selection.js"></script>
+</body>
+</html>
